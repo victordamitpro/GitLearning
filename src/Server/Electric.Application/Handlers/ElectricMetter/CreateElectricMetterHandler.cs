@@ -23,7 +23,8 @@ namespace Electric.Application.Handlers
         public async Task<Response<string>> Handle(CreateElectricMetterCommand request, CancellationToken cancellationToken)
         {
             _logger.LogInfo($"CreateDeviceHandler(seriaNumber:{request.SeriaNumber})");
-
+            // Test merge
+            int a = 1;
             var electricEntity = DeviceMapper.Mapper.Map<ElectricMetter>(request);
 
             await _electricRepository.InsertOneAsync(electricEntity);
