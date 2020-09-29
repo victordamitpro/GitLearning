@@ -25,7 +25,7 @@ namespace Electric.Application.Handlers
             _logger.LogInfo($"UpdateDeviceHandler(Id:{request.Id}, SeriaNumber:{request.SeriaNumber})");
 
             var electricEntity = DeviceMapper.Mapper.Map<ElectricMetter>(request);
-
+            int a = 1;
             if (electricEntity == null)
                 throw new ApplicationException($"Entity could not be mapped.");
 
