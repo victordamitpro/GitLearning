@@ -23,7 +23,7 @@ namespace Electric.Application.Handlers
         public async Task<Response<string>> Handle(DeleteElectricMetterCommand request, CancellationToken cancellationToken)
         {
             _logger.LogInfo($"DeleteDeviceHandler(Id:{request.Id})");
-
+            int c = 1;
             await _repository.DeleteByIdAsync(request.Id);
 
             return new Response<string> { Data = request.Id, ErrorMessage = string.Empty };
