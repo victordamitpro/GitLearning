@@ -24,6 +24,7 @@ namespace Electric.Application.Handlers
         {
             _logger.LogInfo($"DeleteDeviceHandler(Id:{request.Id})");
             int c = 1;
+            int d = 2;
             await _repository.DeleteByIdAsync(request.Id);
 
             return new Response<string> { Data = request.Id, ErrorMessage = string.Empty };
